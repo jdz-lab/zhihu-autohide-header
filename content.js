@@ -36,6 +36,9 @@
   function setup() {
     header = findHeader();
     if (!header) return false;
+    // 首次进入默认隐藏：先设 transform 再开过渡，避免加载时播放收起动画
+    header.style.transform = 'translateY(-100%)';
+    hidden = true;
     header.style.transition = TRANSITION;
     header.style.willChange = 'transform';
     window.addEventListener('wheel', onWheel, { passive: true });
