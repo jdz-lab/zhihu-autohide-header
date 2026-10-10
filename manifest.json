@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "知乎顶栏自动隐藏",
+  "version": "1.0.0",
+  "description": "知乎网页版：滚轮下滑时隐藏顶部标题栏，上滑时自动展示。",
+  "content_scripts": [
+    {
+      "matches": ["https://www.zhihu.com/*", "https://zhuanlan.zhihu.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
